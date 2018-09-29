@@ -50,6 +50,8 @@ Do not bother with
 
 
 Costs:
+
+
 Name| Charges| Frequency
 --- | --- | ---
 Domain | 1500| yearly
