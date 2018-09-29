@@ -50,11 +50,12 @@ Do not bother with
 
 
 Costs:
-Name	Charges	Frequency
-Domain	1500	yearly
-Heroku	500	monthly
-Advert	40	daily
-AWS	4	Monthly
+Name| Charges| Frequency
+--- | --- | ---
+Domain | 1500| yearly
+Heroku | 500| monthly
+Advert | 40| daily
+AWS | 4 | Monthly
 		
 
 
