@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load customtags %}
+
+
+{% block meta_description %}Lets go shopping!{% endblock %}
+
+{% block meta_author %}Ali Khundmiri of AliCoderMaker{% endblock %}
+
+{% block other_meta %}
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="twitter:site" content="@AliCoderMaker">
+
+<meta name="twitter:creator" content="@AliCoderMaker">
+
+<meta property="og:url" content="{{ request.build_absolute_uri }}">
+
+<meta name="twitter:image" content="https://s3.amazonaws.com/side-projects/rs_directory/media/base/reven_sours_social_image.png">
+
+<meta property="og:image" content="https://s3.amazonaws.com/side-projects/rs_directory/media/base/reven_sours_social_image.png">
+
+<meta name="twitter:title" content="A Curated List of Real Online Income Sources!">
+
+<meta property="og:title" content="A Curated List of Real Online Income Sources!">
+
+<meta name="twitter:description" content="Check out the Database of websites which helps you earn money in exchange of real work. No survey sh!t, Just real deal.">
+
+<meta property="og:description" content="Check out the Database of websites which helps you earn money in exchange of real work. No survey sh!t, Just real deal.">
+
+{% endblock %}
+
+
+
+{% block head_extras %}
+<style type="text/css">
+.quote_link{
+	color: #E8F1F2
+}
+</style>
+{% endblock %}
+
+
+{% block content_3 %}
+<div class="container">
+	<!-- Jumbotron Header -->
+	<header class="jumbotron my-4" style="background-color: white">
+		<h1 class="display-3">A Warm Welcome!</h1>
+		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
+		<!-- <a href="#" class="btn btn-primary btn-lg">Call to action!</a> -->
+	</header>
+	
+	<!-- Page Features -->
+	<h2>Products</h2>
+	<div class="card-columns">
+		
+		{% for product in all_products %}
+		{% if forloop.counter == 2 %} <!-- This number is the position of advert -->
+		<div class="card bg-primary text-white text-center p-3">
+			<blockquote class="blockquote mb-0">
+				<p>I Endorse only the products and services which I personally use.</p>
+				<footer class="blockquote-footer">
+					<small>
+						<cite title="Source Title"><a class="quote_link" href="twitter.com/AliCoderMaker">Ali Khundmiri</a></cite>
+					</small>
+				</footer>
+			</blockquote>
+		</div>
+		{% endif %}
+		{% if forloop.counter == 4 %} <!-- This number is the position of advert -->
+		<div class="card">
+			<img class="card-img" src="http://placehold.it/230x260" alt="Card image">
+		</div>
+		{% endif %}
+		<div class="card">
+			<img class="card-img-top center" src="{{product.image_url}}" alt="" style="max-width: 150px;">
+			<!-- {{product.image_display}} -->
+			<div class="card-body">
+				<p><small style="color: gray">{{product.number_of_reviews}} reviews</small></p>
+				<p class="card-text lead">
+					{% if product.selling_price == 0 %}
+					₹{{product.mrp}}
+					{% else %}
+					<small>
+						<s style="color: gray">₹{{product.mrp}}</s>
+					</small>
+					<span style="color: red">₹{{product.selling_price}} 😲</span>
+					{% endif %}
+				</p>
+				<h4 class="card-title">{{product.product_name}}</h4>
+				<p class="card-text">I bought this {{product.using_since|dayssince}}.
+					<br><br> It {% if product.replacement_available == False %} does not {% endif %}came with replacement option {% if product.replacement_available %} and {% else %} but {% endif %} {{product.warranty_years}} year{{ product.warranty_years|pluralize }} of support.
+				</p>
+			</div>
+			<div class="card-footer">
+				<a href="{% url 'core:product_review' id=product.id %}" class="btn btn-primary">Find Out More!</a>
+				<a href="{{product.affiliate_url}}">buy now (MRP HERE)</a>
+			</div>
+		</div>
+		{% endfor %}
+<!-- 		<a href="https://www.amazon.in/Wildcraft-Ltrs-orange-Rucksack-8903338073864/dp/B01G5I8YLC/ref=as_li_ss_il?ie=UTF8&qid=1538236196&sr=8-1&keywords=wildcraft+bag&linkCode=li3&tag=alikhundmiri9-21&linkId=b9b2bf86f1d3f74f035c4821d89391cc&language=en_IN" target="_blank"><img border="0" src="//ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01G5I8YLC&Format=_SL250_&ID=AsinImage&MarketPlace=IN&ServiceVersion=20070822&WS=1&tag=alikhundmiri9-21&language=en_IN" >
+</a><img src="https://ir-in.amazon-adsystem.com/e/ir?t=alikhundmiri9-21&language=en_IN&l=li3&o=31&a=B01G5I8YLC" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /> -->
+
+</div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+

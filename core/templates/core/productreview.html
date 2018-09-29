@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load customtags %}
+
+{% block title %} preview | {{ block.super }}{% endblock %}
+
+{% block meta_description %}Lets go shopping!{% endblock %}
+
+{% block meta_author %}Ali Khundmiri of AliCoderMaker{% endblock %}
+
+{% block other_meta %}
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="twitter:site" content="@AliCoderMaker">
+
+<meta name="twitter:creator" content="@AliCoderMaker">
+
+<meta property="og:url" content="{{ request.build_absolute_uri }}">
+
+<meta name="twitter:image" content="https://s3.amazonaws.com/side-projects/rs_directory/media/base/reven_sours_social_image.png">
+
+<meta property="og:image" content="https://s3.amazonaws.com/side-projects/rs_directory/media/base/reven_sours_social_image.png">
+
+<meta name="twitter:title" content="A Curated List of Real Online Income Sources!">
+
+<meta property="og:title" content="A Curated List of Real Online Income Sources!">
+
+<meta name="twitter:description" content="Check out the Database of websites which helps you earn money in exchange of real work. No survey sh!t, Just real deal.">
+
+<meta property="og:description" content="Check out the Database of websites which helps you earn money in exchange of real work. No survey sh!t, Just real deal.">
+
+{% endblock %}
+
+
+
+{% block head_extras %}
+<style type="text/css">
+.quote_link{
+	color: #E8F1F2
+}
+</style>
+{% endblock %}
+
+
+{% block content_3 %}
+<div class="container">
+	<div style="margin-top: 50px"></div>
+	
+	<h2>{{product.product_name}}</h2>
+	<p>{{product.using_since}}</p>
+	<p>{{product.replacement_available}}</p>
+	<p>{{product.warranty_years}}</p>
+	<p>{{product.affiliate_url}}</p>
+	<p>{{product.number_of_reviews}}</p>
+	
+</div>
+{% endblock %}

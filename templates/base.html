@@ -1,0 +1,108 @@
+{% load staticfiles %}
+
+<!-- Loading custom tags. core/templatetags/customtags.py -->
+{% load customtags %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="{% block meta_description %}{% endblock %}">
+	<meta name="author" content="{% block meta_author %}{% endblock %}">
+	{% block other_meta %}
+
+	{% endblock %}
+
+
+	<title>{% block title %}I'm Frugal & bought these stuff | AliReviewStuff{% endblock %}</title> <!-- MAX 70 Chars-->
+
+
+
+	<!-- Bootstrap core CSS -->
+	<link href="{% static 'base/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+	<!-- loading fontawesome -->
+	<script defer src="{% static 'base/fontawesome/svg-with-js/js/fontawesome-all.js' %}"></script>
+
+	<!-- Custom styles for this template -->
+	<link href="{% static 'base/css/heroic-features.css' %}" rel="stylesheet">
+
+	<style type="text/css">
+	.emoji-header {
+		font-size: 100px !important;
+	}
+	.emoji-header-center {
+		font-size: 100px !important;
+		text-align: center;
+	}
+	.quote_link{
+		color: #E8F1F2
+	}
+	.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}</style>
+
+	
+
+	{% block head_extras %}
+	{% endblock %}
+
+	{% if production %}
+	{% endif %}
+</head>
+
+<body>
+	<!-- Navigation -->
+	{% include 'navbar.html' %}
+
+	<!-- Page Content -->
+	{% block content_1 %}
+	{% endblock %}
+
+	<div class="col-lg-9 col-md-9">{% block content_header %}{% endblock %}</div>
+	<div class="col-lg-3 col-md-3"></div>
+
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-2"></div>
+			<div class="col-lg-6 col-md-8 col-sm-12">
+				<!-- content -->
+				{% block content_2 %}
+				{% endblock %}
+			</div>
+			<div class="col-lg-3 col-md-3"></div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-1 col-md-2"></div>
+			<div class="col-lg-10 col-md-8 col-sm-12">
+				<!-- content -->
+				{% block content_3 %}
+				{% endblock %}
+			</div>
+			<div class="col-lg-1 col-md-3"></div>
+		</div>
+	</div>
+
+
+	<!-- /.container -->
+
+	<!-- Footer -->
+	{% include 'footer.html' %}
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="{% static 'base/vendor/jquery/jquery.min.js' %}"></script>
+	<script src="{% static 'base/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+</html>
