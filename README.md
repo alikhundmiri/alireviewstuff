@@ -21,7 +21,7 @@ Decathon products from https://www.admitad.com/in/
 
 
 TODO
-- [ ] Make website
+- [x] Make website
     - [x] Borrow themes from bootstrap
     - [ ] Review products
     - [ ] Google analytics
@@ -29,7 +29,7 @@ TODO
         - [ ] List view
             - [ ] Show all products
         - [ ] Detail view
-            - [ ] Show one product view with review.
+            - [x] Show one product view with review.
     - [ ] Search feature
     - [ ] 
 
@@ -42,11 +42,10 @@ TODO
 
 
 Do not bother with
-- [ ] Review interface
-- [ ] admin monitor system
-- [ ] Affiliate link click counter
-- [ ] Badges for products
-- [ ] 
+- [x] Review interface
+- [x] admin monitor system
+- [x] Affiliate link click counter
+- [x] Badges for products 
 
 
 Costs:
@@ -58,18 +57,18 @@ Domain | 1500| yearly
 Heroku | 500| monthly
 Advert | 40| daily
 AWS | 4 | Monthly
-		
+        
 
 
 Models
 
-- [ ] Product name
-- [ ] Product Purchase usage since
-    - [ ] calculate the usage duration using above field
+- [x] Product name
+- [x] Product Purchase usage since
+    - [x] calculate the usage duration using above field
 - [ ] any replacements
-- [ ] Replacements possible? BOOLEAN
-- [ ] Warranty BOOLEAN
-- [ ] Review (BLOG)
-- [ ] Purchase Affiliate Link
-    - [ ] Amazon
+- [x] Replacements possible? BOOLEAN
+- [x] Warranty BOOLEAN
+- [x] Review (BLOG)
+- [x] Purchase Affiliate Link
+    - [x] Amazon
 

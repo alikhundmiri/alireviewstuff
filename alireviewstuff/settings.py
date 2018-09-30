@@ -36,6 +36,8 @@ SECRET_KEY = '@hg2+bfggy@x3)&cvdz*&656n*_c^ls_vl33u#%5jq#!8a*c*&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+PRODUCTION = False
+
 
 ALLOWED_HOSTS = [
 'http://127.0.0.1:8000/',
