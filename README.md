@@ -24,16 +24,16 @@ TODO
 - [x] Make website
     - [x] Borrow themes from bootstrap
     - [ ] Review products
-    - [ ] Google analytics
+    - [x] Google analytics
     - [ ] Views
-        - [ ] List view
+        - [x] List view
             - [ ] Show all products
-        - [ ] Detail view
+        - [x] Detail view
             - [x] Show one product view with review.
     - [ ] Search feature
-    - [ ] 
 
 - [ ] Launch Social media accounts
+    - [ ] New Email address
     - [ ] Instagram account
     - [ ] Facebook
     - [ ] Link Facebook and Instagram
