@@ -20,5 +20,7 @@ app_name = 'core'
 
 urlpatterns = [
     path('', views.lander , name='lander'),
+    path('about/', views.about , name='about'),
+   	path('hidden/', views.hidden , name='hidden'),
     path('review/<int:id>', views.product_review, name='product_review'),
 ]

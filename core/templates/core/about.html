@@ -2,7 +2,7 @@
 {% load markdown_deux_tags %}
 {% load customtags %}
 
-{% block title %} {{product.product_name}} Review By Ali Khundmiri{% endblock %}
+{% block title %}About Ali Khundmiri.{% endblock %}
 
 {% block meta_description %}Lets go shopping!{% endblock %}
 
@@ -38,6 +38,11 @@
 <style type="text/css">
 .quote_link{
 	color: #E8F1F2
+}
+.social-section{
+	padding: 10px;
+	margin: 10px;
+	text-align: center;
 }</style>
 {% endblock %}
 
@@ -50,49 +55,26 @@
 				<img class="card-img" src="http://placehold.it/100x100" alt="Card image">
 			</div>
 			<div class="col-lg-10">
-				<p>By <b>Ali Khundmiri</b></p>
+				<p>Hi, I am <b>Ali Khundmiri</b></p>
 				I'm passionate about the products which help me to get by day.
 				Here you will find some products that I have used & and I think you should use too.
 			</div>
 		</div>
 	</section>
-	<section class="text-section">
-		<div class="row">
-			<div class="col">
-				<img class="card-img-top center" src="{{product.image_url}}" alt="" style="max-width: 150px; margin-top: 40px">
-			</div>
-			<div class="col-lg-8">
-				<h2>{{product.product_name}}</h2>
-				<p class="lead"> 
-					I bought this product {{product.using_since|dayssince}}.
-					<br> It {% if product.replacement_available == False %} does not {% endif %}came with replacement option {% if product.replacement_available %} and {% else %} but {% endif %} {{product.warranty_years}} year{{ product.warranty_years|pluralize }} of support.
-				</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col">
-				<a href="{{product.affiliate_url}}">Purchase from authentic Supplier</a>
-				<p style="color: gray">Number of reviews: {{product.number_of_reviews}}</p>
 
-			</div>
-		</div>
-	</section>
-
-	{% for review in all_reviews %}
 	<section class="text-section">
-		<p><small><span style="color: red">PUBLISHED:</span> {{review.timestamp}}</small></p>
-		<blockquote class="blockquote text-center">
-			{{review.product_caption}}
-		</blockquote>
+		<h2 class="text-center">About me</h2>
 		<br>
-		<p>
-			{{ review.product_review|markdown|safe|linebreaks  }}
-		</p>
-	</section>
-	{% endfor %}
-	<section class="text-section">
-		<h5>Buy Now</h5>
+		<p>About me</p>
 		<a href="{{product.affiliate_url}}">Purchase from authentic Supplier.</a>
+	</section>
+	<section class="text-section text-center">
+		<h5>Follow me over the internet</h5>
+		<span class=" text-center">
+			<a class="social-section" target="_blank" href="https://www.facebook.com/alicodermaker"><i class="fab fa-facebook-f fa-3x"></i></a>
+			<a class="social-section" target="_blank" href="https://www.twitter.com/alicodermaker"><i class="fab fa-twitter fa-3x"></i></a> 
+			<a class="social-section" target="_blank" href="https://www.instagram.com/alicodermaker"><i class="fab fa-instagram fa-3x"></i></a> 
+		</span>
 	</section>
 </div>
 {% endblock %}
